@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Invitación XV Andrea</title>
+
+    <!-- Open Graph Protocol-->
+    <meta property="og:title" content="Invitación XV Sofía" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ragg100.github.io/" />
+    <meta property="og:description" content="Te invitamos cordialmente a celebrar el cumpleaños número 15 de Sofía.">
+    <meta property="og:image" content="https://ragg100.github.io/assets/imgs/Miniatura-0.jpg" />
+    <meta property="og:image:alt" content="Invitación" />
+    <meta property="og:image:secure_url" content="https://ragg100.github.io/assets/imgs/Miniatura-0.jpg" />
+
+    <!-- Stylesheets-->
+    <!-- Para normalizar -->
+    <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+    <!-- Para fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Para íconos -->
+    <link href="./assets/css/remixicon.css" rel="stylesheet">
+    <!-- Principal -->
+    <link href="./assets/css/main.css" rel="stylesheet">
+    <script src="./assets/javascript/reloj.js"></script>
+    <script src="./assets/javascript/galeria.js"></script>
+
+    <!-- Javascript -->
+    <!-- Cuenta regresiva-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            update_Countdown();
+            // Refresh every second
+            setInterval(update_Countdown, 1000);
+        })
+    </script>
+</head>
+
+<body>
+    <!-- Botón de audio con canción -->
+    <audio controls loop style="position: fixed; top: 0%; right: 0%; width: 100px;">
+        <source src="./assets/audio/song.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Encabezado -->
+    <section class="container back-image" style="background-image: url('./assets/imgs/Header.webp');">
+        <div style="position: absolute; inset: auto 0% 0% 0%; color: white;">
+            <h2 class="shadow-text">¡Mis XV Años!</h2>
+            <h1 class="shadow-text" style="color: white; font-size: 4em;">Andrea Ortiz</h1>
+            <h2 class="shadow-text">6-Septiembre-2025</h2>
+        </div>
+    </section>
+
+    <!-- Fecha -->
+    <section class="container" style="flex-direction: column; background-color: black;">
+        <div class="container">
+            <div class="cell">
+                <p><span id="days"></span><br>dias</p>
+            </div>
+            <div class="cell">
+                <p><span id="hours"></span><br>hrs.</p>
+            </div>
+            <div class="cell">
+                <p><span id="minutes"></span><br>min.</p>
+            </div>
+            <div class="cell">
+                <p><span id="seconds"></span><br>seg.</p>
+            </div>
+        </div>
+        <div>
+            <p style="color: rgb(135, 220, 251); bottom: 0%; font-size: larger;">Hay momentos en la vida que son
+                irrepetibles,<br>pero compartirlos con las personas que más quieres<br>los hace inolvidables</p>
+        </div>
+    </section>
+
+    <!-- Lugar -->
+    <section class="container" style="flex-flow: row wrap;">
+        <p class="title">Acompáñame</p>
+        <div class="container" style="flex-flow: row wrap; align-items: stretch;">
+            <div class="shadow-box" style="width: 39%;">
+                <h2>Ceremonia Religiosa</h2>
+                <p>Iglesia de San Pedro.</p>
+                <img src="./assets/imgs/iglesia.jpg" style="width: 100%; border-radius: 10px;">
+                <p>6:30 p.m.</p>
+                <p>San Pedro Atzumba, Zapotitlan, Pue.</p>
+                <a href="https://maps.app.goo.gl/WbNgJwnoDWFJJMZW7?g_st=aw" target="_blank">
+                    <div class="button">
+                        <p><i class="ri-map-pin-line"></i> Ver mapa</p>
+                    </div>
+                </a>
+            </div>
+            <div class="shadow-box" style="width: 39%;">
+                <h2>Evento</h2>
+                <p>Salón Mundo Eventos</p>
+                <img src="./assets/imgs/salon.jpg" style="width: 100%; border-radius: 10px;">
+                <p>8:00 p.m.</p>
+                <p>Av. Lincoln #12005, Col. Cumbres San Agustín, Monterrey, N.L.</p>
+                <a href="https://goo.gl/maps/PNrFyHE34RQjf8XX6" target="_blank">
+                    <div class="button">
+                        <p><i class="ri-map-pin-line"></i> Ver mapa</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agradecimientos -->
+    <!-- Colores
+            rgb(211, 243, 255) celeste
+            rgb(255, 166, 133) coral
+            rgb(168, 235, 212) aquamarine
+        -->
+    <section class="container" style="background-color:rgb(32, 169, 243); flex-direction: row;">
+        <div>
+            <p class="title">En agradecimiento a mis padres</p>
+            <p class="subtitle">Marittsa Yesenia Garza Luna</p>
+            <p class="subtitle">Ricardo Francisco Guzmán Méndez</p>
+        </div>
+    </section>
+
+    <!-- Mesa de regalos -->
+    <section class="container" style="background-image: url('./assets/imgs/fondo-5.jpg');">
+        <div class="container" style="flex-direction: column;">
+            <div class="shadow-box" style="width: 80%; margin: 2%; max-width: 500px;">
+                <p class="paragraph" style="color:rgb(11, 90, 239); font-weight: 600;font-size: 1.2em;">Mi mejor regalo
+                    es compartir contigo este gran día. Sin embargo, si deseas obsequiarme algo, puedo sugerir las
+                    siguientes opciones. </p>
+            </div>
+            <div class="container" style="align-items: stretch;">
+                <!-- Regalo -->
+                <div class="box" style="padding:0.5em; border-radius: 5%; width: 45%;">
+                    <div class="circle">
+                        <i class="ri-gift-line"></i>
+                    </div>
+                    <p class="subtitle" style="margin:0.2em;">Regalo</p>
+                    <img class="svg" src="./assets/imgs/Regalo.svg">
+                </div>
+
+                <!-- Sobres -->
+                <div class="box" style="padding:0.5em; border-radius: 5%; width: 45%;">
+                    <div class="circle">
+                        <i class="ri-mail-line"></i>
+                    </div>
+                    <p class="subtitle" style="margin:0.2em;">Sobre</p>
+                    <img class="svg" src="./assets/imgs/Sobre.svg" style="margin: 15% 0px 10% 0px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Instagram -->
+    <section class="container">
+        <div
+            style="background-image: url(./assets/imgs/IG-Photo.jpg); background-position: center center; background-size: cover; width: 50%; height: 100vh;">
+        </div>
+        <div class="shadow-box" style="padding:0.5em; border-radius: 5%; width: 50%; margin: 0px; height: 30%;">
+            <div class="circle">
+                <i class="ri-instagram-line"></i>
+            </div>
+            <p class="subtitle" style="margin:0.2em;">Instagram</p>
+            <a href="https://www.instagram.com/weird_in_pisces/?img_index=1" target="_blank"><img class="image"
+                    src="./assets/imgs/QR.png" loading="lazy"></a>
+            <p>Recuerda tomar muchas fotos y compartirlas en Instagram</p>
+        </div>
+    </section>
+
+    <!-- Vestimenta -->
+    <section class="container">
+        <div style="width: 100%;">
+            <p class="title">Código de vestimenta</p>
+            <h3>Hombres y Mujeres</h3>
+            <p class="subtitle">Semiformal</p>
+            <img src="./assets/imgs/vestimenta.png" loading="lazy" alt="Codigo de vestimenta" class="image">
+        </div>
+    </section>
+
+
+    <!-- Confirmación -->
+    <section class="container" style="background-image:url('./assets/imgs/fondo-2.jpg')">
+        <div class="container">
+            <div class="box" style="border-radius: 5%; width: 70%; max-width: 300px;">
+                <p class="subtitle">Reserva tu lugar</p>
+                <p class="title">RSVP</p>
+                <p>Espero de corazón puedas acompañarme
+                    por favor confirma tu asistencia para agregarte
+                    a mi lista de invitados.<br>
+                    <strong>(1 persona)</strong>
+                </p>
+                <a href="https://chat.whatsapp.com/C9jlZPDscDvKlhO4C0P9C2" target="_blank">
+                    <div class="button">
+                        <p><i class="ri-whatsapp-line"></i> Boton confirmación</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section class="container back-image"
+        style="flex-direction: column; background-image: url('./assets/imgs/fondo-3.jpg'); height: 100%;">
+        <p class="title" style="top: 2em;">Galeria</p>
+        <div class="container">
+            <button onclick="move(-1)" class="gallery-button"><i class="ri-arrow-left-s-line"></i></button>
+            <img id="Galeria-1" class="gallery" style="max-width: 60%; margin-bottom: 2em;"
+                src="./assets/imgs/Galeria/IMG (1).webp">
+            <button onclick="move(1)" class="gallery-button"><i class="ri-arrow-right-s-line"></i></button>
+        </div>
+    </section>
+
+    <!-- Despedida -->
+    <section class="container" style="background-image: url('./assets/imgs/fondo-4.webp')">
+        <div class="content shadow-box-dark" , style="background-color: white; border-radius: 5%;">
+            <!-- Linea -->
+            <h1>Sofia Guzmán</h1>
+            <h2 style="color: black;">¡Los esperamos!</h2>
+            <img src="./assets/imgs/Despedida.jpg" alt="Foto Sofía" loading="lazy" class="image-rounded">
+        </div>
+    </section>
+</body>
+
+</html>
