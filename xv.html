@@ -45,9 +45,26 @@
 
 <body>
     <!-- Botón de audio con canción -->
-    <audio controls loop style="position: fixed; top: 0%; right: 0%; width: 100px;">
+    <audio id="bgMusic" autoplay loop style="display: none;">
         <source src="./assets/audio/song.mp3" type="audio/mp3">
     </audio>
+
+    <button id="sl" onclick="toggleMute()" style="position: fixed; top: 0%; right: 0%; width: 100px;">
+        Silenciar
+    </button>
+    <script>
+        const audio = document.getElementById('bgMusic');
+
+        // Forzar la reproducción automática (necesario para algunas políticas de navegadores)
+        document.addEventListener('click', function () {
+            audio.play().catch(e => console.log("Auto-play prevented"));
+        }, { once: true });
+
+        function toggleMute() {
+            audio.muted = !audio.muted;
+            this.textContent = audio.muted ? "Activar sonido" : "Silenciar";
+        }
+    </script>
 
     <!-- Encabezado -->
     <section class="container back-image" style="background-image: url('./assets/imgs/Header.webp');">
@@ -98,11 +115,11 @@
             </div>
             <div class="shadow-box" style="width: 39%;">
                 <h2>Evento</h2>
-                <p>Salón Mundo Eventos</p>
+                <p>Hogar Ortiz Escobar</p>
                 <img src="./assets/imgs/salon.jpg" style="width: 100%; border-radius: 10px;">
-                <p>8:00 p.m.</p>
-                <p>Av. Lincoln #12005, Col. Cumbres San Agustín, Monterrey, N.L.</p>
-                <a href="https://goo.gl/maps/PNrFyHE34RQjf8XX6" target="_blank">
+                <p>6:00 PM.</p>
+                <p>Av, Camino el manantial, San Pedro Atzumba, Zapotitlan, Pue.</p>
+                <a href="https://maps.app.goo.gl/GRkjWLfPqTjgGT3x9" target="_blank">
                     <div class="button">
                         <p><i class="ri-map-pin-line"></i> Ver mapa</p>
                     </div>
@@ -119,9 +136,9 @@
         -->
     <section class="container" style="background-color:rgb(32, 169, 243); flex-direction: row;">
         <div>
-            <p class="title">En agradecimiento a mis padres</p>
-            <p class="subtitle">Marittsa Yesenia Garza Luna</p>
-            <p class="subtitle">Ricardo Francisco Guzmán Méndez</p>
+            <p class="title2">En agradecimiento a mi familia</p>
+            <p class="subtitle">Elizabeth Ortiz Escobar</p>
+
         </div>
     </section>
 
@@ -166,8 +183,8 @@
                 <i class="ri-instagram-line"></i>
             </div>
             <p class="subtitle" style="margin:0.2em;">Instagram</p>
-            <a href="https://www.instagram.com/weird_in_pisces/?img_index=1" target="_blank"><img class="image"
-                    src="./assets/imgs/QR.png" loading="lazy"></a>
+            <a href="https://www.instagram.com/esc.andi?utm_source=qr&igsh=NjlmZGh6cmZxem92" target="_blank"><img
+                    class="image" src="./assets/imgs/Captura de pantalla 2025-03-31 095432.png" loading="lazy"></a>
             <p>Recuerda tomar muchas fotos y compartirlas en Instagram</p>
         </div>
     </section>
@@ -192,7 +209,7 @@
                 <p>Espero de corazón puedas acompañarme
                     por favor confirma tu asistencia para agregarte
                     a mi lista de invitados.<br>
-                    <strong>(1 persona)</strong>
+                    <strong>(# personas)</strong>
                 </p>
                 <a href="https://chat.whatsapp.com/C9jlZPDscDvKlhO4C0P9C2" target="_blank">
                     <div class="button">
@@ -219,7 +236,7 @@
     <section class="container" style="background-image: url('./assets/imgs/fondo-4.webp')">
         <div class="content shadow-box-dark" , style="background-color: white; border-radius: 5%;">
             <!-- Linea -->
-            <h1>Sofia Guzmán</h1>
+            <h1>Andrea Ortiz Escobar</h1>
             <h2 style="color: black;">¡Los esperamos!</h2>
             <img src="./assets/imgs/Despedida.jpg" alt="Foto Sofía" loading="lazy" class="image-rounded">
         </div>
