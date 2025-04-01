@@ -176,7 +176,7 @@
     <!-- Instagram -->
     <section class="container">
         <div
-            style="background-image: url(./assets/imgs/IG-Photo.jpg); background-position: center center; background-size: cover; width: 50%; height: 100vh;">
+            style="background-image: url(./assets/imgs/Galeria/IMG\(4\).jpg); background-position: center center; background-size: cover; width: 50%; height: 100vh;">
         </div>
         <div class="shadow-box" style="padding:0.5em; border-radius: 5%; width: 50%; margin: 0px; height: 30%;">
             <div class="circle">
@@ -225,12 +225,47 @@
         style="flex-direction: column; background-image: url('./assets/imgs/fondo-3.jpg'); height: 100%;">
         <p class="title" style="top: 2em;">Galeria</p>
         <div class="container">
-            <button onclick="move(-1)" class="gallery-button"><i class="ri-arrow-left-s-line"></i></button>
-            <img id="Galeria-1" class="gallery" style="max-width: 60%; margin-bottom: 2em;"
-                src="./assets/imgs/Galeria/IMG (1).webp">
-            <button onclick="move(1)" class="gallery-button"><i class="ri-arrow-right-s-line"></i></button>
+            <button onclick="prevImage()" class="gallery-button"><i class="ri-arrow-left-s-line"></i></button>
+            <div class="gallery-container">
+                <img id="gallery-image" class="gallery" style="max-width: 60%; margin-bottom: 2em;"
+                    src="./assets/imgs/Galeria/IMG(1).jpg">
+            </div>
+            <button onclick="nextImage()" class="gallery-button"><i class="ri-arrow-right-s-line"></i></button>
         </div>
     </section>
+
+    <script>
+        // Configuración del carrusel manual
+        const totalImages = 18;
+        let currentImage = 1;
+        const galleryImg = document.getElementById('gallery-image');
+
+        // Función para mostrar la imagen actual
+        function showImage() {
+            galleryImg.src = `./assets/imgs/Galeria/IMG(${currentImage}).jpg`;
+        }
+
+        // Función para la imagen anterior
+        function prevImage() {
+            currentImage--;
+            if (currentImage < 1) {
+                currentImage = totalImages;
+            }
+            showImage();
+        }
+
+        // Función para la siguiente imagen
+        function nextImage() {
+            currentImage++;
+            if (currentImage > totalImages) {
+                currentImage = 1;
+            }
+            showImage();
+        }
+
+        // Inicializar con la primera imagen
+        showImage();
+    </script>
 
     <!-- Despedida -->
     <section class="container" style="background-image: url('./assets/imgs/fondo-4.webp')">
@@ -238,7 +273,7 @@
             <!-- Linea -->
             <h1>Andrea Ortiz Escobar</h1>
             <h2 style="color: black;">¡Los esperamos!</h2>
-            <img src="./assets/imgs/Despedida.jpg" alt="Foto Sofía" loading="lazy" class="image-rounded">
+            <img src="./assets/imgs/Galeria/IMG(9).jpg" alt="Foto Sofía" loading="lazy" class="image-rounded">
         </div>
     </section>
 </body>
