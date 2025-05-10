@@ -29,7 +29,7 @@ toggleDarkModeButton.addEventListener('click', () => {
 // Script simplificado para el botón de acceso
 document.getElementById('accessButton').addEventListener('click', function () {
     // Aquí puedes redirigir a otra página o mostrar contenido
-    alert('¡Acceso concedido! Bienvenido/a.');
+    /*alert('¡Acceso concedido! Bienvenido/a.');*/
     window.location.href = "xv.html"; // Descomenta para redirigir
 });
 
