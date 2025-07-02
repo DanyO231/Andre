@@ -75,6 +75,24 @@ h1 {
     margin-bottom: 20px;
     color: var(--color-primary);
     font-family: 'Poppins', sans-serif;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 15px rgba(255, 133, 162, 0.5);
+        transform: scale(1);
+    }
+
+    50% {
+        text-shadow: 0 0 50px rgba(255, 133, 162, 0.9), 0 0 80px rgba(255, 133, 162, 0.7);
+        transform: scale(1.02);
+    }
+
+    100% {
+        text-shadow: 0 0 15px rgba(255, 133, 162, 0.5);
+        transform: scale(1);
+    }
 }
 
 .titulo {
