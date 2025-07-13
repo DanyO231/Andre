@@ -12,6 +12,40 @@
     --sec-color: rgb(19, 152, 201);
 }
 
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 15px rgba(91, 185, 223, 0.5);
+        transform: scale(1);
+    }
+
+    50% {
+        text-shadow: 0 0 50px rgba(19, 152, 201, 0.9), 0 0 80px rgba(91, 185, 223, 0.7);
+        transform: scale(1.02);
+    }
+
+    100% {
+        text-shadow: 0 0 15px rgba(91, 185, 223, 0.5);
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse1 {
+    0% {
+        text-shadow: 0 0 15px rgb(225, 241, 6);
+        transform: scale(1);
+    }
+
+    50% {
+        text-shadow: 0 0 50px rgba(189, 201, 19, 0.9), 0 0 80px rgba(197, 223, 91, 0.7);
+        transform: scale(1.02);
+    }
+
+    100% {
+        text-shadow: 0 0 15px rgb(217, 255, 0);
+        transform: scale(1);
+    }
+}
+
 /*rgb(211, 243, 255) celeste
 rgb(255, 166, 133) coral
 rgb(168, 235, 212) aquamarine
@@ -86,16 +120,18 @@ html {
 }
 
 h1 {
-    font-family: var(--main-font);
+    font-family: var(--main-font), sans-serif;
     font-size: 36pt;
     letter-spacing: 0.25em;
     color: var(--main-color);
+    animation: pulse 3s infinite;
 }
 
 h2 {
-    font-family: var(--sec-font);
+    font-family: var(--sec-font), sans-serif;
     font-size: 2em;
     font-weight: 500;
+    animation: pulse 3s infinite;
 }
 
 img {
@@ -144,24 +180,27 @@ a {
 }
 
 .title {
-    font-family: var(--main-font);
+    font-family: var(--main-font), sans-serif;
     font-size: 36pt;
     font-weight: 500;
     color: var(--main-color);
+    animation: pulse 3s infinite;
 }
 
 .title2 {
-    font-family: var(--main-font);
+    font-family: var(--main-font), sans-serif;
     font-size: 36pt;
     font-weight: 500;
     color: aliceblue;
+    animation: pulse1 3s infinite;
 }
 
 .subtitle {
-    font-family: var(--main-font);
+    font-family: var(--main-font), sans-serif;
     font-size: 28pt;
     font-weight: 400;
     color: black;
+    animation: pulse 3s infinite;
 }
 
 .paragraph {
@@ -169,6 +208,7 @@ a {
     margin-bottom: 1em;
     width: 80%;
     color: var(--sec-color);
+    animation: pulse1 5s infinite;
 }
 
 .shadow-text {
